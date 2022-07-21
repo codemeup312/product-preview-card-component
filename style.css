@@ -1,0 +1,115 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 15%;
+  background-color: var(--Cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  margin: 3% auto;
+  width: 70%;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+.product {
+  padding: 0.1% 7%;
+}
+.product-image-d {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+}
+.Product-type {
+  font-weight: 400;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.1rem;
+}
+.Product-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.product-description {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6;
+}
+.product-price {
+  color: var(--Dark-cyan);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 10% 0;
+  font-family: "Fraunces", serif;
+}
+.old-price {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  margin: auto 0.3rem;
+  position: relative;
+  top: -0.2rem;
+}
+.btn-container {
+  text-align: center;
+}
+.cta-btn {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  width: 100%;
+  transition: 0.6s;
+  border-radius: 10px;
+  padding: 7% 0;
+  border: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.cta-btn:hover {
+  width: 50%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Dark-grayish-blue);
+}
+
+.attribution a {
+  color: var(--Dark-cyan);
+  text-decoration: none;
+}
+/* when screen < 800px display mobile view image */
+@media (max-width: 800px) {
+  .product-image-d {
+    display: none;
+  }
+  .product-image-m {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .container {
+    display: block;
+    width: 80%;
+    padding-bottom: 1.2rem;
+  }
+}
+/* when screen > 800px display desktop view image */
+
+@media (min-width: 800px) {
+  .product-image-d {
+    display: block;
+  }
+  .product-image-m {
+    display: none;
+  }
+}
